@@ -45,7 +45,7 @@ See the process running under container
 
 Build images on local
 
-`docker image build -i image-name:version .`
+`docker image build -t image-name:version .`
 
 publish image in docker hub
 
@@ -84,3 +84,7 @@ Containers logs
 Map volme in container
 
 `docker run -p 8080:8080 -v /app/data:/image-default-data-path imagenmae`
+
+Or
+
+`docker run -p 8080:8080 -v "$(pwd)":/app -v /app/node_modules imageName`
