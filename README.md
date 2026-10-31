@@ -88,3 +88,23 @@ Map volme in container
 Or
 
 `docker run -p 8080:8080 -v "$(pwd)":/app -v /app/node_modules imageName`
+
+##Docker compose
+
+Run docker compose
+`docker-compose up`
+
+Stop docker compose
+`docker-compose down`
+
+Stop and remove all the data
+`docker-compose down -v`
+
+Run postgreySql image with volume mount for data persistence
+`docker run --name postgresContainer -e POSTGRES_PASSWORD=1234 -p 5432:5432 -v /Users/sunil/Documents/Learning/git/database/postgreySql/db1:/var/lib/postgresql -d postgres:latest`
+
+Stop running container
+`docker stop container-name`
+
+Start stopped container
+`docker start container-name`
